@@ -1,30 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="is">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Áfangalýsingar | Menntaskólinn á Egilsstöðum</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="me-header">
-  <div class="me-header__inner">
+  <div class="me-header-inner">
     <a href="index.html" class="me-brand">
       <img src="images/me-logo.png" alt="Menntaskólinn á Egilsstöðum" class="me-logo">
-      <div class="me-title">
-        <span class="me-school">Menntaskólinn á Egilsstöðum</span>
-        <span class="me-page-title">Áfangalýsingar</span>
-      </div>
+      <div class="me-brand-text"><div class="me-school">Menntaskólinn á Egilsstöðum</div><div class="me-page-title">Áfangalýsingar</div></div>
     </a>
-    <nav class="me-nav" aria-label="Aðalvalmynd">
-      <a href="index.html" class="active">Áfangalýsingar</a>
-      <a href="https://www.me.is/">Vefur ME</a>
-    </nav>
+    <nav class="me-nav" aria-label="Aðalvalmynd"><a href="index.html" class="active">Áfangalýsingar</a><a href="https://www.me.is/">Vefur ME</a></nav>
   </div>
 </header>
-<main class="content">
-  <h1>Áfangalýsingar</h1>
-  <p>Velkomin á yfirlit yfir áfangalýsingar Menntaskólans á Egilsstöðum.</p>
+<main>
+  <section class="hero"><div class="hero-content"><h1>Áfangalýsingar</h1><p>Leitaðu að áfanga eftir heiti eða áfangakóða.</p>
+    <div class="search-box"><input type="search" id="courseSearch" placeholder="Leita að áfanga eða áfangakóða..." aria-label="Leita að áfanga" autocomplete="off"><button type="button" id="clearSearch">Hreinsa</button></div>
+    <p id="searchResultCount" class="search-result-count" aria-live="polite"></p>
+  </div></section>
+  <section class="courses"><h2>Áfangar</h2><div class="course-grid" id="courseGrid">
+    <article class="course-card" data-code="ÍSLE" data-name="Íslenska"><div class="course-code">ÍSLE</div><h3>Íslenska</h3><p>Skoða áfangalýsingar í íslensku.</p><a href="#">Skoða áfanga →</a></article>
+    <article class="course-card" data-code="STÆR" data-name="Stærðfræði"><div class="course-code">STÆR</div><h3>Stærðfræði</h3><p>Skoða áfangalýsingar í stærðfræði.</p><a href="#">Skoða áfanga →</a></article>
+    <article class="course-card" data-code="ENSK" data-name="Enska"><div class="course-code">ENSK</div><h3>Enska</h3><p>Skoða áfangalýsingar í ensku.</p><a href="#">Skoða áfanga →</a></article>
+    <article class="course-card" data-code="NÁTT" data-name="Náttúrufræði"><div class="course-code">NÁTT</div><h3>Náttúrufræði</h3><p>Skoða áfangalýsingar í náttúrufræði.</p><a href="#">Skoða áfanga →</a></article>
+    <article class="course-card" data-code="FÉLA" data-name="Félagsgreinar"><div class="course-code">FÉLA</div><h3>Félagsgreinar</h3><p>Skoða áfangalýsingar í félagsgreinum.</p><a href="#">Skoða áfanga →</a></article>
+    <article class="course-card" data-code="TUNG" data-name="Tungumál"><div class="course-code">TUNG</div><h3>Tungumál</h3><p>Skoða áfangalýsingar í tungumálum.</p><a href="#">Skoða áfanga →</a></article>
+  </div><div id="noResults" class="no-results" hidden><h3>Engir áfangar fundust</h3><p>Prófaðu annað heiti eða áfangakóða.</p></div></section>
 </main>
+<footer class="me-footer"><div class="footer-inner"><img src="images/me-logo.png" alt="" class="footer-logo"><div><strong>Menntaskólinn á Egilsstöðum</strong><p>Áfangalýsingar</p></div></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
